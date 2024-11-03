@@ -1,0 +1,48 @@
+#divwrapper{
+    font-size: 30px;
+    border: 2px solid black;
+    background-color: bisque;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-shrink არ მოქმედებს flex-wrapთან ერთად, თუ wrap გვაქ გაწერილი მაშინ ის არ შევიწროვდება და ჩამოყრის ჩვენს ელემენტებს */
+    height: 600px;
+    flex-basis: 600px;
+    /* flex-basis-არის სიმაღლე და სიგანის მნიშვნელობები flex-boxში. ის */
+    justify-content: center;
+    align-items:stretch;
+    /* stretch არ მოქმედებს თუ ელემენტს არ ზომები გაწერილი,
+    თუ ჰორიზონტალურია მაშინ სიმაღლე არ უნდა ქონდეს
+    თუ ვერტიკალურია მაშინ სიგანე, ყოველ შემთხვევაში cross axis ზომები არ უნდა ქონდეს გაწერილი */
+    align-items: center;
+    /* baseline align elements acconring to elements  input/
+    unlike start align elements according to elements.*/
+
+    align-content: space-around;
+    /* align-content აპოზიციონირებს მეორადი ხაზის ანყ cross axis შორის დაშორებას, ანუ თყ ვერტიკალური ხაზია მეორადი ვერტიკალურ ხაზებს შორის დაშორებებს. */
+    column-gap: 20px;
+}
+/*თუ მშობელ ელემენტს არ მივცეთ სიგანის მნიშვნელობას მაშინ მას შეეძლება დააპატარავოს მის შიგ არსებული ელემენტები ისე რომ ყველა ელემენტი ჩაეტის მის ზომებში
+ანუ როცა ფანჯა-რას დავაპატარევებთ ის მის შიგ არსებულ ელემენტებსაც დააპატარავებს იმის მიხედვით თუ რამდენად დავაპატარევეთ ჩვენ ასრებული ფანჯარა  */
+div{
+    height: 150px;
+    width: 200px;
+    background-color: red;
+    border: 2px dotted black;
+}
+
+
+#divtwo{
+    align-self: flex-end;
+    flex-grow: 2;
+}
+
+
+#divfour{
+    flex-grow: 9;
+}
+
+
+
+
